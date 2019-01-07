@@ -4,13 +4,13 @@
 
 ## Motivation
 
-* If you are writing in a pure funtional style, which means a) no side-effect, b) no shared/global state. You only need to test the input to the output. There is nothing else to test. Since pure functions transform data (from A -> B, from raw to html etc.). If you need to test side-effects such as database, http calls, reading writing to disk, you need to use integrational tests. Mocking is code smell.
+If you are writing in a pure funtional style, which means a) no side-effect, b) no shared/global state. You only need to test the input to the output. There is nothing else to test. Since pure functions transform data (from A -> B, from raw data to html etc.). If you need to test side-effects such as database, http calls, reading writing to disk, you need to use integrational tests. Mocking is code smell.
 
 ## API
 
 ```js
 module.exports = expect
-``´
+```
 
 ## Examples
 
@@ -36,9 +36,10 @@ test(double(2))
 test(triple(2))
     (8)('should return 8')
 
-// no need to test at all since it's composed out of 3 functions: 
+// no need to test multiply() since it's composed out of 3 functions: 
 // id(), double(), triple()
 // they have been tested before.
+
 test(multiply(2))
     (64)('should return 64')
 ```
