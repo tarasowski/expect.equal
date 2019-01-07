@@ -28,11 +28,11 @@ const test = actual => expected => msg =>
         .toEqual(expected, msg)
 
 test(id(1))
-    (1)('should return 1')
+    (1)('id() should return 1')
 test(double(2))
-    (4)('should return 4')
+    (4)('double() should return 4')
 test(triple(2))
-    (8)('should return 8')
+    (8)('triple() should return 8')
 
 // multiply() doesn't need to be tested, since it's a composition
 // of 3 functions that have already been tested.
