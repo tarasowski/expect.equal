@@ -4,7 +4,7 @@
 
 ## Motivation
 
-If you are writing in a pure funtional style, which means a) no side-effect, b) no shared/global state. You only need to test the input to the output. There is nothing else to test. Since pure functions transform data (from A -> B, from raw data to html etc.). If you need to test side-effects such as database, http calls, reading writing to disk, you need to use integrational tests. Mocking is code smell.
+If you are writing in a pure functional style, which means a) no side-effect, b) no shared/global state. You only need to test the input to the output. There is nothing else to test. Since pure functions transform data (from A -> B, from raw to HTML etc.). If you need to test side-effects such as a database connection, HTTP calls, reading/writing to disk, you need to use integrational tests. Mocking is a code smell.
 
 ## API
 
