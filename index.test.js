@@ -1,4 +1,4 @@
-const expect = require('./index')
+const { expect } = require('./index')
 
 const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x)
 
@@ -19,8 +19,5 @@ test(double(2))
 test(triple(2))
     (8)('should return 8')
 
-// no need to test at all since it's composed out of 3 functions: 
-// id(), double(), triple()
-// they have been tested before.
-test(multiply(2))
-    (64)('should return 64')
+// multiply() doesn't need to be tested, since it's a composition
+// of 3 functions that have already been tested.

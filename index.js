@@ -17,5 +17,5 @@ const expect = (counter => actual => (
 ))(0)
 
 
-module.exports = expect
+module.exports = { expect }
 
