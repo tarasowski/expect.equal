@@ -1,0 +1,20 @@
+{
+  "name": "expect.equal",
+  "version": "1.0.0",
+  "description": "Just for testing your pure functions and nothing else",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarasowski/expect.equal.git"
+  },
+  "keywords": [],
+  "author": "Dimitri Tarasowski <dimitri+npm@tarasowski.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarasowski/expect.equal/issues"
+  },
+  "homepage": "https://github.com/tarasowski/expect.equal#readme"
+}
