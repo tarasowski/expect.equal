@@ -2,17 +2,17 @@
 
 > If the only available assertion in every test suite was equal(), almost every test suite in the world would be better for it. Because equal() by nature answers the two most important questions every unit test must answer: 1) What is the actual output?, 2) What is expected output? by Eric Elliot
 
-* Motivation
+## Motivation
 
 * If you are writing in a pure funtional style, which means a) no side-effect, b) no shared/global state. You only need to test the input to the output. There is nothing else to test. Since pure functions transform data (from A -> B, from raw to html etc.). If you need to test side-effects such as database, http calls, reading writing to disk, you need to use integrational tests. Mocking is code smell.
 
-* API
+## API
 
 ```js
 module.exports = expect
 ``´
 
-* Example
+## Examples
 
 ```js
 const expect = require('./index')
