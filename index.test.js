@@ -1,17 +1,26 @@
 const expect = require('./index')
 
-const double = x => x * 2
+const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x)
 
-const testDouble = actual => expected => msg =>
+const id = x => x
+const double = x => x * x
+const triple = x => x * x * x
+
+const multiply = compose(triple, double, id)
+
+const test = actual => expected => msg =>
     expect(actual)
         .toEqual(expected, msg)
 
-testDouble(double(5))(10)(
-    'it should check if values are equal'
-)
-testDouble([1, 2, 3])([1, 2, 3])(
-    'it should check if values are equal'
-)
-testDouble(double(5))(11)(
-    'it should fail the test'
-)
+test(id(1))
+    (1)('should return 1')
+test(double(2))
+    (4)('should return 4')
+test(triple(2))
+    (8)('should return 8')
+
+// no need to test at all since it's composed out of 3 functions: 
+// id(), double(), triple()
+// they have been tested before.
+test(multiply(2))
+    (64)('should return 64')
