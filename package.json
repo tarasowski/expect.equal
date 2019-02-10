@@ -1,7 +1,7 @@
 {
   "name": "expect.equal",
-  "version": "1.0.1",
-  "description": "Just for testing your pure functions and nothing else",
+  "version": "0.0.2",
+  "description": "Test your pure functions and nothing else",
   "main": "index.js",
   "scripts": {
     "test": "node index.test.js"

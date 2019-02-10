@@ -1,5 +1,5 @@
-function error({ counter, actual, expected, msg }) {
-    console.error('\x1b[31m', '\n', 'not ok', '#' + counter, msg, '\n', 'actual: ', actual, '\n', 'expected:', expected, '\x1b[0m', '\n')
+const error = ({ counter, actual, expected, msg })  => {
+    console.error('not ok', '#' + counter, msg, '\n\n', 'actual:\n', actual, '\n\n', 'expected:\n', expected,  '\n')
     throw Error('Test failed!')
 }
 
